@@ -4,7 +4,7 @@ Haystack demo on Amazon SageMaker
 ![Screenshot](images/screenshot.png)
 
 # Acknowledgement
-This is an adaptation of [Deepset's Haystack tutorial on basic Q&A systems](!https://haystack.deepset.ai/tutorials/01_basic_qa_pipeline) to run it Amazon SageMaker.
+This is an adaptation of ![Deepset's Haystack tutorial on basic Q&A systems](https://haystack.deepset.ai/tutorials/01_basic_qa_pipeline) to run it Amazon SageMaker.
 
 # Steps to set up this demo
 1. This demo requires an Elasticsearch (ES) server where the documents will be stored. If you already have an ES server then you can skip this step.

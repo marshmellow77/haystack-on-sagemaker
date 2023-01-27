@@ -20,7 +20,7 @@ DOC_REQUEST = "query"
 DOC_FEEDBACK = "feedback"
 DOC_UPLOAD = "file-upload"
 
-SM_ENDPOINT = <SAGEMAKER_ENDPOINT_NAME>
+SM_ENDPOINT = "haystack-demo-endpoint"
 SM_REGION = "us-east-1"
 
 

@@ -1,6 +1,4 @@
 # haystack-on-sagemaker
-Haystack demo on Amazon SageMaker
-
 ![Screenshot](images/screenshot.png)
 
 # Acknowledgement

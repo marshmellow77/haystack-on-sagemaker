@@ -20,6 +20,9 @@ DOC_REQUEST = "query"
 DOC_FEEDBACK = "feedback"
 DOC_UPLOAD = "file-upload"
 
+SM_ENDPOINT = <SAGEMAKER_ENDPOINT_NAME>
+SM_REGION = "us-east-1"
+
 
 def haystack_is_ready():
     """
@@ -51,14 +54,13 @@ def query_sm_endpoint(query, filters={}, top_k_reader=5, top_k_retriever=5) -> T
     Returns both a ready-to-use representation of the results and the raw JSON.
     """
     
-    endpoint_name = "huggingface-pytorch-inference-2023-01-05-15-12-09-424"
-    sagemaker_runtime = boto3.client('runtime.sagemaker', region_name="us-east-1")
+    sagemaker_runtime = boto3.client('runtime.sagemaker', region_name=SM_REGION)
     
     params = {"filters": filters, "Retriever": {"top_k": top_k_retriever}, "Reader": {"top_k": top_k_reader}}    
     payload = {"inputs": query, "parameters": params}
     
     res = sagemaker_runtime.invoke_endpoint(
-            EndpointName=endpoint_name,
+            EndpointName=SM_ENDPOINT,
             ContentType='application/json',
             Body=json.dumps(payload)
     )

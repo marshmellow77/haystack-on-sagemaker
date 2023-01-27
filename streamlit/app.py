@@ -9,11 +9,11 @@ import streamlit as st
 from annotated_text import annotation
 from markdown import markdown
 
-from utils import haystack_is_ready, query, send_feedback, upload_doc, haystack_version, get_backlink, query_sm_endpoint
+from utils import haystack_is_ready, send_feedback, upload_doc, haystack_version, get_backlink, query_sm_endpoint
 
 
 # Adjust to a question that you would like users to see in the search bar when they load the UI:
-DEFAULT_QUESTION_AT_STARTUP = os.getenv("DEFAULT_QUESTION_AT_STARTUP", "Why are tech layoffs not a sign of recession?")
+DEFAULT_QUESTION_AT_STARTUP = os.getenv("DEFAULT_QUESTION_AT_STARTUP", "Who killed Tywin Lannister?")
 DEFAULT_ANSWER_AT_STARTUP = os.getenv("DEFAULT_ANSWER_AT_STARTUP", "")
 
 # Sliders

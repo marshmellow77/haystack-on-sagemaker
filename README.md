@@ -18,3 +18,5 @@ Haystack demo on Amazon SageMaker
     2. You can now run the app with the command `streamlit run streamlit/app.py`
     3. Now you can navigate in the browser to `https://IP-ADDRESS:8501`, where you should see the app running
   
+# Architecture diagram
+![Architecture diagram](images/architecture.png)
